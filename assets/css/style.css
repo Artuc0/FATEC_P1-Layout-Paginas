@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0;
+    background-color: #000000;
+    font-family: "Roboto";
+}
+
+h2, h3 {
+    font-family: "Pinyon Script";
+}
+
+.navbar {
+    display: flex;
+    background-color: #000000;
+    color: #F0EFF4;
+    font-family: "Sixtyfour", sans-serif;
+}
+
+.navbar img {
+    margin: 10px 10px;
+    width: 70px;
+    height: 50px;
+}
+
+header {
+    background: linear-gradient(#DA4167, #832161);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+
+.header {
+    padding: 0 12em 0 10em;
+    text-align: center;
+}
+
+header p {
+    align-self: center;
+    text-shadow: 2px 2px 3px #3D2645;
+}
+
+.mettaCook {
+    max-width: 45%;
+}
+
+#logo {
+    width: 30em;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+aside img {
+    margin: 10px;
+    width: 7rem;
+    border-radius: 20px; 
+}
+
+.item {
+    display: flex;
+}
+
+.item img {
+    width: 175px;
+    height: 175px;
+}
+
+section ul img {
+    margin: 10px;
+    inline-size: 400px;
+    border-radius: 40px;
+    max-height: 250px;
+}
+
+.imagens {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+#main {
+    background-color: #F0EFF4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#newsletter {
+    background: linear-gradient(#832161, #3D2645);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.divEsquerda {
+    background: linear-gradient(#832161, #3D2645);
+    width: 40%;
+    padding: 5em;
+    color: #F0EFF4;
+    text-align: center;
+}
+
+#vejaTambem {
+    background-color: #F0EFF4;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em 0 2em;
+}
+
+div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: yellow;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	opacity: 0;
+}
+    
+#vejaTambem figure:hover + span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+/*Animação de Zoom-in*/
+#vejaTambem figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+#vejaTambem figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+footer {
+    color: #F0EFF4;
+    background-color: black;
+    text-align: center;
+}
