@@ -10,6 +10,7 @@ h2, h3 {
     font-family: "Pinyon Script";
 }
 
+/*Navbar*/
 .navbar {
     display: flex;
     background-color: #000000;
@@ -23,6 +24,7 @@ h2, h3 {
     height: 50px;
 }
 
+/*Header*/
 header {
     background: linear-gradient(#DA4167, #832161);
     display: flex;
@@ -49,6 +51,39 @@ header p {
     width: 30em;
 }
 
+/*Section main*/
+
+section ul img {
+    margin: 10px;
+    inline-size: 400px;
+    border-radius: 40px;
+    max-height: 250px;
+}
+
+.imagens {
+    display: flex;
+    flex-flow: column;
+    
+}
+
+i {
+    cursor: pointer;
+}
+
+/*Imagem borra quando se passa o cursor por cima*/
+.imagens img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transition: filter 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
+}
+
+.imagens img:hover {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+/*Aside dentro do main*/
 aside {
     display: flex;
     flex-direction: column;
@@ -71,19 +106,6 @@ aside img {
     height: 175px;
 }
 
-section ul img {
-    margin: 10px;
-    inline-size: 400px;
-    border-radius: 40px;
-    max-height: 250px;
-}
-
-.imagens {
-    display: flex;
-    flex-flow: column nowrap;
-    
-}
-
 #main {
     background-color: #F0EFF4;
     display: flex;
@@ -91,6 +113,7 @@ section ul img {
     justify-content: space-around;
 }
 
+/*Newsletter Section*/
 #newsletter {
     background: linear-gradient(#832161, #3D2645);
     display: flex;
@@ -106,29 +129,33 @@ section ul img {
     text-align: center;
 }
 
+
+/*Estilo do Botão*/
+button {
+    align-items: center;
+    color: #F0EFF4;
+    background-color: #000000;
+    font-size: 16px;
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3D2645;
+}
+
+
+/*Section de veja também*/
 #vejaTambem {
     background-color: #F0EFF4;
     display: flex;
     justify-content: space-evenly;
     padding: 2em 0 2em;
-}
-
-div span {
-	position: absolute;
-	bottom: -20px;
-	left: 0;
-	z-index: -1;
-	display: block;
-	width: 300px;
-	margin: 0;
-	padding: 0;
-	color: yellow;
-	font-size: 18px;
-	text-decoration: none;
-	text-align: center;
-	-webkit-transition: 0.3s ease-in-out;
-	transition: 0.3s ease-in-out;
-	opacity: 0;
 }
     
 #vejaTambem figure:hover + span {
@@ -153,4 +180,154 @@ footer {
     color: #F0EFF4;
     background-color: black;
     text-align: center;
+}
+
+
+
+@media (max-width: 1024px) {
+    /* Ajuste para tablets */
+    
+    body {
+        width: fit-content;
+    }
+    
+    header {
+        height: 400px;
+        width: fit-content;
+    }
+
+    .header {
+        padding: 0 5em;
+    }
+
+    #logo {
+        width: 20em;
+    }
+
+    #main {
+        align-items: center;
+        width: fit-content;
+    }
+    
+    .item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #newsletter {
+        flex-flow: row wrap;
+        padding: 1em;
+    }
+    
+    .divEsquerda {
+        background: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajuste para dispositivos móveis */
+    header {
+        height: 300px;
+    }
+
+    .header {
+        padding: 0 2em;
+    }
+
+    #logo {
+        width: 15em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar img {
+        width: 50px;
+        height: 35px;
+    }
+
+    .item img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .divEsquerda {
+        width: 90%;
+        padding: 2em;
+    }
+
+    #vejaTambem {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    #vejaTambem figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste para telas muito pequenas (ex: smartphones) */
+    .header {
+        padding: 0 1em;
+    }
+
+    .navbar {
+        padding: 10px;
+        flex-direction: row;
+    }
+
+    .navbar img {
+        width: 60px;
+        height: 50px;
+    }
+
+    #logo {
+        width: 13.5em;
+    }
+    
+    #intro {
+        font-size: 0.85em;
+        margin: 5px;
+    }
+    
+    .imagens {
+        margin: 0;
+        padding: 1.25em;
+    }
+    
+    .item {
+        display: block;
+    }
+
+    .item img {
+        width: 15em;
+        height: 15em;
+    }
+    
+    .item i {
+        visibility: hidden;
+    }
+
+    .divEsquerda {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    #vejaTambem {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    footer {
+        font-size: 10px;
+    }
 }
