@@ -4,13 +4,14 @@ body {
     margin: 0;
     background-color: #000000;
     font-family: "Roboto";
+    min-height: 100vh;
 }
 
 h2, h3 {
     font-family: "Pinyon Script";
 }
 
-/*Navbar*/
+/* Navbar */
 .navbar {
     display: flex;
     background-color: #000000;
@@ -18,69 +19,78 @@ h2, h3 {
     font-family: "Sixtyfour", sans-serif;
     position: sticky;
     top: 0;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
 }
 
 .navbar img {
-    margin: 10px 10px;
-    width: 70px;
-    height: 50px;
+    margin: 0.5rem;
+    width: 4.375rem; /* 70px/16 */
+    height: 3.125rem; /* 50px/16 */
+    max-width: 100%;
 }
 
-/*Header*/
+/* Header */
 header {
     background: linear-gradient(#DA4167, #832161);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 500px;
+    min-height: 31.25rem; /* 500px/16 */
+    flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .header {
-    padding: 0 12em 0 10em;
+    padding: 0 1rem;
     text-align: center;
+    flex: 1 1 30rem;
+    max-width: 50rem;
 }
 
 header p {
     align-self: center;
     text-shadow: 2px 2px 3px #3D2645;
+    padding: 0 12em
 }
 
 .mettaCook {
     max-width: 45%;
+    height: auto;
 }
 
 #logo {
-    width: 30em;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
 }
 
-/*Section main*/
+/* Section main */
 #main {
     background-color: #F0EFF4;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    padding: 1rem;
 }
 
 section ul img {
-    margin: 10px;
-    inline-size: 400px;
-    border-radius: 40px;
-    max-height: 250px;
+    margin: 0.625rem;
+    width: 100%;
+    max-width: 25rem;
+    border-radius: 2.5rem;
+    height: auto;
+    max-height: 15.625rem;
     cursor: pointer;
 }
 
 .imagens {
     display: flex;
     flex-flow: column;
-    
+    align-items: center;
 }
 
-i {
-    cursor: pointer;
-}
-
-/*Imagem borra quando se passa o cursor por cima
-* Desativado porque tava entrando em conflito com a navbar
+/* Animação onde as imagens borram quando se passa o cursor por cima*/
 .imagens img {
     -webkit-filter: blur(0);
     filter: blur(0);
@@ -92,20 +102,21 @@ i {
     -webkit-filter: blur(3px);
     filter: blur(3px);
 }
-*/
 
-/*Aside dentro do main*/
+/* Aside */
 aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
 }
 
 aside img {
-    margin: 10px;
+    margin: 0.625rem;
     width: 7rem;
-    border-radius: 20px; 
+    border-radius: 1.25rem;
 }
 
 .item {
@@ -113,35 +124,44 @@ aside img {
 }
 
 .item img {
-    width: 175px;
-    height: 175px;
+    width: 10.9375rem;
+    height: 10.9375rem;
+    max-width: 100%;
 }
 
-/*Newsletter Section*/
+i {
+    cursor: pointer;
+}
+
+/* Newsletter Section */
 #newsletter {
     background: linear-gradient(#832161, #3D2645);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
 }
 
 .divEsquerda {
-    width: 40%;
-    padding: 5em;
+    width: 100%;
+    max-width: 40rem;
+    padding: 1rem;
     color: #F0EFF4;
     text-align: center;
 }
 
 .divDireita {
-    width: 25em;
-    padding: 1em 0 2em;
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
 }
 
 .advert {
     width: 100%;
+    height: auto;
 }
 
-/*Estilo do Botão*/
 button {
     align-items: center;
     color: #F0EFF4;
@@ -160,19 +180,27 @@ button:hover {
     background-color: #3D2645;
 }
 
-
-/*Section de veja também*/
+/* Section vejaTambem */
 #vejaTambem {
     background-color: #F0EFF4;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#vejaTambem figure {
+    margin: 1rem;
+    text-align: center;
 }
 
 #vejaTambem figure img {
-    width: 20em;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
     cursor: pointer;
 }
-    
+
 /*Animação de Zoom-in*/
 /*Conflita com a navbar em dispositivos móveis*/
 #vejaTambem figure img {
@@ -187,169 +215,102 @@ button:hover {
 	transform: scale(1.3);
 }
 
+/* Footer */
 footer {
     color: #F0EFF4;
     background-color: black;
     text-align: center;
+    padding: 1rem;
 }
 
 a {
     text-decoration: none;
     color: #F0EFF4;
-    font-size: 3em;
+    font-size: 2rem;
     padding-top: 1rem;
 }
 
 .xtrasmall {
-    font-size: x-small;
+    font-size: 0.75rem;
 }
 
-
-/*Responsividade*/
+/* Media Queries Otimizadas */
 @media (max-width: 1024px) {
-    /* Ajuste para tablets */
-    
-    body {
-        width: fit-content;
-    }
-    
     header {
-        height: 400px;
-        width: fit-content;
+        min-height: 25rem;
     }
-
+    
     .header {
-        padding: 0 5em;
-    }
-
-    #logo {
-        width: 20em;
-    }
-
-    #main {
-        align-items: center;
-        width: fit-content;
-    }
-    
-    .item img {
-        width: 150px;
-        height: 150px;
-    }
-
-    #newsletter {
-        flex-flow: row wrap;
-        padding: 1em;
-    }
-    
-    .divEsquerda {
-        background: none;
+        padding: 0 3rem;
     }
 }
 
 @media (max-width: 768px) {
-    /* Ajuste para dispositivos móveis */
     header {
-        height: 300px;
+        flex-direction: column;
+        min-height: auto;
+        padding: 2rem 1rem;
     }
-
+    
+    .mettaCook {
+        max-width: 80%;
+        order: -1;
+    }
+    
     .header {
-        padding: 0 2em;
+        padding: 1rem;
     }
-
-    #logo {
-        width: 15em;
+    
+    header p {
+        padding: 0;
     }
-
-    .navbar {
+    
+    .item {
         flex-direction: column;
-        align-items: center;
     }
-
-    .navbar img {
-        width: 50px;
-        height: 35px;
+    
+    i {
+        visibility: hidden;
     }
-
-    .item img {
-        width: 130px;
-        height: 130px;
-    }
-
-    .divEsquerda {
-        width: 90%;
-        padding: 2em;
-    }
-
-    #vejaTambem {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    #vejaTambem figure img {
+    
+    .divEsquerda, .divDireita {
         width: 100%;
-        height: auto;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 1em;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ajuste para telas muito pequenas (ex: smartphones) */
-    .header {
-        padding: 0 1em;
-    }
-
     .navbar {
-        padding: 10px;
         flex-direction: row;
+        justify-content: center;
     }
-
+    
+    i {
+        visibility: hidden;
+    }
+    
     .navbar img {
-        width: 60px;
-        height: 50px;
+        width: 3.75rem;
+        height: 2.8125rem;
     }
-
+    
     #logo {
-        width: 13.5em;
-    }
-    
-    #intro {
-        font-size: 0.85em;
-        margin: 5px;
-    }
-    
-    .imagens {
-        margin: 0;
-        padding: 1.25em;
+        max-width: 15rem;
     }
     
     .item {
-        display: block;
-    }
-
-    .item img {
-        width: 15em;
-        height: 15em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     
-    .item i {
-        visibility: hidden;
+    .item img {
+        width: 12rem;
+        height: 12rem;
     }
-
-    .divEsquerda {
-        width: 90%;
-        padding: 1.5em;
-    }
-
-    #vejaTambem {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    footer {
-        font-size: 10px;
+    
+    button {
+        width: 100%;
+        padding: 0.75rem;
     }
 }
